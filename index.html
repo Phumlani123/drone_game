@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./images/drone.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Zone</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h3>Place drone any where on canvas using the below:</h3>
+    <div class="inputs">
+      <div class="x-axis">
+        <h5>X axis:</h5>
+        <input
+          type="range"
+          min="0"
+          max="9"
+          value="0"
+          class="slider"
+          id="xRange"
+        />
+      </div>
+      <div class="y-axis">
+        <h5>Y axis:</h5>
+        <input
+          type="range"
+          min="0"
+          max="9"
+          value="0"
+          class="slider"
+          id="yRange"
+        />
+      </div>
+
+      <div class="direction">
+        <h5>Direction:</h5>
+        <select id="direction">
+          <option value="North">North</option>
+          <option value="South">South</option>
+          <option value="East">East</option>
+          <option value="West">West</option>
+        </select>
+        <button id="place">Place</button>
+      </div>
+    </div>
+    <div class="report">
+      <h4>Drone report: <span id="report"></span></h4>
+      <button id="reportBtn">Get report</button>
+    </div>
+
+    <div id="canvas">
+      <img id="drone" class="drone" src="./images/drone.png" alt="" />
+      <img id="laser" class="laser" src="./images/laser.png" alt="" />
+    </div>
+    <script type="module" src="./scripts/script.js"></script>
+  </body>
+</html>
